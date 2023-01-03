@@ -14,8 +14,8 @@ setuptools.setup(
      long_description_content_type="text/markdown",
      url="https://github.com/Moist-Cat/cli_dict",
      include_package_data=True,
-     package_dir={"":"src"},
-     packages=setuptools.find_packages(where="src"),
+#     package_dir={"":"src"},
+#     packages=setuptools.find_packages(where="src"),
      python_requires=">=3.8",
      classifiers=[
          "Programming Language :: Python :: 3",

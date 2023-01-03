@@ -1,9 +1,12 @@
 import sys
 import json
+from pathlib import Path
 from difflib import get_close_matches
 
-with open("data.json") as file:
-    data = json.load(open("data.json"))
+BASE_DIR = Path(__file__).parent
+
+with open(BASE_DIR / "data.json") as file:
+    data = json.load(file)
 
 def main(word):
     result = get_meaning(word)
