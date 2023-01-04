@@ -34,12 +34,12 @@ def get_meaning(word):
             pass
 
     # case: add new word
-    word = input("The word is not in the database. Write the meaning to add it or press Enter: ")
-    if word:
-        data[word] = input("Enter the meaning of the word: ")
-        with open("data.json", "w") as file:
+    meaning = input("The word is not in the database. Write the meaning to add it or press Enter: ")
+    if meaning:
+        data[word] = meaning
+        with open(BASE_DIR / "data.json", "w") as file:
             json.dump(data, file, indent=4)
-        return data["word"]
+        return data[word]
 
 if __name__ == "__main__":
     try:
